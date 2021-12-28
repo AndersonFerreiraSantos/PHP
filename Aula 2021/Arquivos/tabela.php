@@ -1,0 +1,23 @@
+<table>
+		<tr>
+			<th>Tarefas</th>
+			<th>Descricao</th>
+			<th>Prazo</th>
+			<th>Prioridade</th>
+			<th>Concluída</th>
+			<th>Ações</th>
+		<tr>
+		<?php foreach($lista_tarefas as $tarefa): ?>
+			<tr>
+				<td><?php echo $tarefa['nome']; ?></td>		
+				<td><?php echo $tarefa['descricao']; ?></td>
+				<td><?php echo $tarefa['prazo']; ?></td>
+				<td><?php echo $tarefa['prioridade']; ?></td>
+				<td><?php echo $tarefa['concluida']; ?></td>
+				<td>
+					<a href="editar.php?id=<?php echo $tarefa['id']; ?>">Editar</a> | 
+					<a href="remover.php?id=<?php echo $tarefa['id']; ?>">Remover</a>
+				</td>
+			</tr>
+		<?php endforeach; ?>	
+	<table>		

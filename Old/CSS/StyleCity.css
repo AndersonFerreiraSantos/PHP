@@ -1,0 +1,70 @@
+body {
+    width: 100%; 
+
+}
+
+
+
+*{
+    margin:0;
+    padding:0;
+    border:none;
+    outline:none;
+    box-sizing:border-box;
+    font-size:100%;
+}
+
+.header{
+    background-image: url(Imagens/ImagemCidade/background.png); 
+    width: 100%;
+    /*
+    background-image: url(Imagens/ImagemCidade/background.png); 
+	display: block;
+    white-space: pre;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%; 
+   
+    margin-left: auto;
+ 
+    z-index:-1; 
+    */
+}
+
+
+.Casa{
+}
+.Oficina{
+}
+
+.Porto{ 
+}
+.Pesquisa{   
+}
+.No{
+}
+
+
+/* width: 100%; = Ocupar 100% da tela 
+
+    margin-left: auto;
+    margin-right: auto;
+
+ width: 100%;  
+  z-index:-1;     
+  width:20%;
+     bottom: 30%;
+     left: 50%;
+         z-index:-1;
+    top:50px;
+    position: absolute;
+    display: block;
+
+       margin:0;
+    padding:0;
+    border:none;
+    outline:none;
+    box-sizing:border-box;
+    font-size:100%;
+
+

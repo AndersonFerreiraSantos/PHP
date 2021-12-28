@@ -1,0 +1,54 @@
+body{
+    background-color:rgba(255, 218, 151, 0.774)
+}
+.nav_bar{
+    text-decoration: none;
+    background-color: rgba(184, 119, 0, 0.774);
+    height: 50px;
+    border-radius: 20px;
+}
+
+.text_logout{
+    position:absolute;
+    text-decoration: none;
+    margin-left: 80%;
+    margin-top: 15px;
+}
+
+.text_chefes{
+    position:absolute;
+    text-decoration: none;
+    margin-left: 75%;
+    margin-top: 15px;
+}
+
+.text_funcionarios{
+    position:absolute;
+    text-decoration: none;
+    margin-left: 65%;
+    margin-top: 15px;
+}
+
+.text_home{
+    position:absolute;
+    text-decoration: none;
+    margin-left: 55%;
+    margin-top: 15px;
+}
+
+.text_session{
+    position:absolute;
+    text-decoration: none;
+    padding-left: 5%;
+    padding-top: 15px;
+}
+
+.button_funcionario_1{
+    position: absolute;
+    margin-top: 40px;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 8px;
+    color: white;
+    background-color: rgb(131, 85, 17);
+}
