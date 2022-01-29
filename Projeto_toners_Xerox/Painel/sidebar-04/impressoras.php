@@ -102,6 +102,19 @@ session_start();
             unset($_SESSION['impressora_cadastrada']);
         ?>
     </div>
+    <div>
+     <?php
+            if(isset($_SESSION['impressora_editada'])):
+            ?>
+        <div class="alert alert-success" role="alert">
+            Impressora editada com sucesso.
+        </div>
+        <?php
+            endif;
+            // Destroi uma session especifica, nesse caso destrui a 'usuario invalido'
+            unset($_SESSION['impressora_editada']);
+        ?>
+    </div>
 
 
 </containner>
@@ -125,7 +138,7 @@ session_start();
         <a href="Config/config_session.php?acao=cadastrar">
 
         <div class="row_impressoras">
-                <div class="card_impressoras uso_impressoras">
+                <div class="card_impressoras2 uso_impressoras">
 
  
                   <br><br><br><br><br><br><br><br><br><br>

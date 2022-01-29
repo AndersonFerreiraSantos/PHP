@@ -8385,12 +8385,25 @@ a[data-toggle="collapse"] {
   min-width: 290px;
   height: 300px;
 }
+.card_impressoras2 {
+  color:white;
+  border-radius: 5px;
+  box-shadow: 17px 17px 13px 0px rgba(50, 50, 50, 0.22);
+  max-width: 290px;
+  min-width: 290px;
+  height: 300px;
+}
+
+.card_impressoras2:hover{
+  background-color:#2f89fc;
+} 
  
 .card_impressoras p {
   text-align: center;
   color: black;
   font-size: 16px;
   margin: -5px;
+  
 }
  
 .image_impressoras {
@@ -8504,4 +8517,14 @@ a[data-toggle="collapse"] {
   color: blue;
   border: 1px solid #ced4da;
   border-radius: 0.25rem; 
+}
+
+#invi{
+  height:0;
+  width:0;
+  visibility: hidden;
+  padding:0;
+  margin:0;
+  float:right;
+  position: absolute;
 }
