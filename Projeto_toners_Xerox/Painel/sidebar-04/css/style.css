@@ -4,6 +4,8 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -2894,6 +2896,8 @@ input[type="button"].btn-block {
   margin-left: -1px; }
 
 .input-group-text {
+  text-align:center;
+  width: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2906,7 +2910,6 @@ input[type="button"].btn-block {
   font-weight: 400;
   line-height: 1.5;
   color: #495057;
-  text-align: center;
   white-space: nowrap;
   background-color: #e9ecef;
   border: 1px solid #ced4da;
@@ -3317,6 +3320,7 @@ input[type="button"].btn-block {
 .custom-control-label::before,
 .custom-file-label,
 .custom-select {
+  text-align: center;
   -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -8321,9 +8325,11 @@ a[data-toggle="collapse"] {
 }
 .titulos{
   align-items: center;
+  text-align: center;
 }
 
 .input_cadastro{
+  text-align: center;
   display: block;
   width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
@@ -8342,33 +8348,47 @@ a[data-toggle="collapse"] {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; }
 
-#nav_impressoras{
+.nac{
+  margin-top: -90px;
+  background-color: black;
+}
+.box_impressoras{
+  border-radius: 10px;
+}
+.box_impressoras2{
+  border-radius: 10px;
+  background-color: black;
+  position: absolute;
+}
+
+.box_cadastro{
   color: white;
 }
 
-#nav_impressoras:hover{
-  background-color: #2f89fc;
-}
-#box_impressoras{
-  border-radius: 5px;
-  margin-top: -70px;
+#icon_config{
+  color: black;
+  position: absolute;
 }
 
+
 .row_impressoras{
+  margin: 10px;
   text-align: center;
-  margin-bottom: 10px;
+  align-items: center;
 }
 
 .card_impressoras {
+  color:white;
   border-radius: 5px;
-  box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
-  max-width: 200px;
-  min-width: 200px;
+  box-shadow: 17px 17px 13px 0px rgba(50, 50, 50, 0.22);
+  max-width: 290px;
+  min-width: 290px;
   height: 300px;
 }
  
 .card_impressoras p {
-  color: #a3a5ae;
+  text-align: center;
+  color: black;
   font-size: 16px;
   margin: -5px;
 }
@@ -8379,8 +8399,109 @@ a[data-toggle="collapse"] {
   max-height: 124px;
 }
 .uso_impressoras {
-  border-left: 3px solid #4895ff;
+  border-left: 6px solid #4895ff;
+  
 }
 .display_impressoras{
   display: inline-block;
+}
+
+.input_filial{
+  width: 40%;
+  border:none;
+  text-align: center;
+  transform: translate(50%,-50%);
+}
+#button_cadastrar:hover{
+  color:white;
+  background-color:#2f89fc ;
+}
+
+.link_impressoras{
+  margin: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+.alteracao_filial{
+  position: absolute;
+  background-color: black;
+}
+.image_mais{
+  display:inline-flex;
+  max-width: 124px;
+  max-height: 124px;
+}
+.form{
+  margin-top: -74px;
+  background-color: #212121;
+  padding: 5px;
+  align-items: center;
+}
+.box_form{
+  background-color: white;
+  max-width: 500px;
+  margin-left: 35%;
+  padding: 20px;
+  border-radius: 10px;
+}
+.border{
+  border-color: black;
+}
+.position{
+  height: 100%;
+  width: 100%;
+}
+
+.button_up{
+  text-align:center;
+  width: 100%;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  color: black;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem; 
+
+}
+.button_up:hover{
+  background-color: #2f89fc;
+  color: white;
+}
+.input-group-text2 {
+  text-align:center;
+  min-width: 80px;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  color: black;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem; 
+}
+.form-control1{
+  text-align:center;
+  min-width:82.5% ;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  color: black;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem; 
+}
+
+.input-group-textip {
+  text-align:center;
+  min-width: 80px;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  color: blue;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem; 
+}
+.form-controlip{
+  text-align:center;
+  min-width:82.5% ;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  color: blue;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem; 
 }

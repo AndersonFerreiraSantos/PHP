@@ -1,7 +1,5 @@
 <?php 
 session_start();
-;
-
 
 ?>
 <!doctype html>
@@ -16,86 +14,33 @@ session_start();
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/style.css">
   </head>
-<containner><br>
-    <form class="nav_impressoras" action="Config/config_cadastrar_impressora.php" method="POST">
-        <div>
-            <nav id="box_impressoras" class="navbar navbar-dark bg-dark">
-            <button id="nav_impressoras" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="">Cadastrar</span>
-            </button>
-            <button id="nav_impressoras" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText2" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="">?</span>
-            </button>
-            <button id="nav_impressoras" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText3" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="">?</span>
-            </button><br>
-            <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav mr-auto">
-            <li class="nav-item active"><br>
-                <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                </div>
-                
-                <select name="modelo" class="input_cadastro" aria-label="Default select example">
-                    <?php foreach($lista_modelo_impressoras as $modelo_impressora): ?>
-                        <option><?php echo $modelo_impressora['modelo']; ?></option>
-                    <?php endforeach; ?>	
-                </select>
+<containner><br> 
+    <?php
+        if(isset($_SESSION['editar_impressora'])):
+        ?>
+            <?php include('html/template_editar.php'); ?>
+        <?php
+            endif;
+            // Destroi uma session especifica, nesse caso destrui a 'usuario invalido'
+            unset($_SESSION['editar_impressora']);
+        ?>
 
-                </div>
-            </li>
-            <li>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">Nome:</span>
-                    </div>
-                <input name="nome" type="text" class="form-control" aria-describedby="basic-addon1">
-                </div>
-            </li>
-            <li>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">Filial:</span>
-                    </div>
-                <input name="filial" type="text" class="form-control" aria-describedby="basic-addon1">
-                </div>
-            </li>
-            
-
-            <li>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">Seção:</span>
-                    </div>
-                <input name="secao" type="text" class="form-control" aria-describedby="basic-addon1">
-                </div>
-            </li>
-
-            <li>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">IP:</span>
-                    </div>
-                <input name="ip" type="text" class="form-control" aria-describedby="basic-addon1">
-                </div>
-            </li>
-
-            <button class="form-control" type="submit"> CADASTRAR </button>
-
-
-            </ul>
-            <span class="navbar-text">
-            </span>
-        </div>
-    </form>
-    </div>
+    <?php
+        if(isset($_SESSION['cadastrar_impressora'])):
+        ?>
+            <?php include('html/template_cadastrar.php'); ?>
+        <?php
+            endif;
+            // Destroi uma session especifica, nesse caso destrui a 'usuario invalido'
+            unset($_SESSION['cadastrar_impressora']);
+        ?>
 
     <div>
      <?php
             if(isset($_SESSION['nome_vazio'])):
             ?>
         <div class="alert alert-danger" role="alert">
-            Necessário preencer o campo "NOME".
+            Necessário preencher o campo "NOME".
         </div>
         <?php
             endif;
@@ -108,7 +53,7 @@ session_start();
             if(isset($_SESSION['filial_vazio'])):
             ?>
         <div class="alert alert-danger" role="alert">
-            Necessário preencer o campo "FILIAL".
+            Necessário preencher o campo "FILIAL".
         </div>
         <?php
             endif;
@@ -122,7 +67,7 @@ session_start();
             if(isset($_SESSION['secao_vazio'])):
             ?>
         <div class="alert alert-danger" role="alert">
-            Necessário preencer o campo "SEÇÃO".
+            Necessário preencher o campo "SEÇÃO".
         </div>
         <?php
             endif;
@@ -136,7 +81,7 @@ session_start();
             if(isset($_SESSION['ip_vazio'])):
             ?>
         <div class="alert alert-danger" role="alert">
-            Necessário preencer o campo "IP".
+            Necessário preencher o campo "IP".
         </div>
         <?php
             endif;
@@ -160,31 +105,39 @@ session_start();
 
 
 </containner>
-
-<!-- <select name="modelo" class="input_cadastro" aria-label="Default select example">
-                    <?php foreach($lista_modelo_impressoras as $modelo_impressora): ?>
-                        <option><?php echo $modelo_impressora['modelo']; ?></option>
-                    <?php endforeach; ?>	
-                </select> -->
-
 <impressoras > 
     <?php foreach($lista_impressoras as $impressora): ?>  
         <section class="display_impressoras">
             <div class="row_impressoras">
                 <div class="card_impressoras uso_impressoras">
-                    <h2><?php echo $impressora['filial']; ?></h2>
+                    <h2 class="titulos"><?php echo $impressora['filial']; ?></h2><hr>
                     <p><?php echo $impressora['nome']; ?></p>
                     <p><?php echo $impressora['secao']; ?></p>
                     <p><?php echo $impressora['modelo']; ?></p>
-                    <p href="<?php echo $impressora['ip']; ?>"><?php echo $impressora['ip']; ?></p>
+                    <a class="link_impressoras" href="//<?php echo $impressora['ip'];?>"><?php echo $impressora['ip']; ?></a><br>
                     <img class="image_impressoras" src="images/<?php echo $impressora['modelo']?>.jpg" alt="settings" />
+                    <a href="Config/config_session.php?acao=editar& ID=<?php echo $impressora['ID']?> " id="" class="fa fa-cog"></a>
                 </div>
-                
             </div>
-
         </section>
     <?php endforeach; ?>	
+    <section class="display_impressoras">
+        <a href="Config/config_session.php?acao=cadastrar">
+
+        <div class="row_impressoras">
+                <div class="card_impressoras uso_impressoras">
+
+ 
+                  <br><br><br><br><br><br><br><br><br><br>
+                </div>
+            </div>
+        </a>
+           
+        </section>
 </impressoras>
 
 </html>
 
+<!-- <a href="painel.php?painel=impressoras& alterar=true& ID=<?php echo $impressora['ID']?> "><span class="fa fa-home mr-3"></span> Filiais</a>
+                        <?php $teste=$_GET['alterar']; ?>
+                        <?php echo $teste; ?> -->

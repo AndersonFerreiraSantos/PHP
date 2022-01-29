@@ -14,8 +14,6 @@ echo $senha;
 $result_usuario = "INSERT INTO impressoras (usuario, senha, nivel) values ('$usuario', '$senha', $nivel)";
 $result_usuario = mysqli_query($conn, $result_usuario);
 
-
 header('Location:index.php');
-
 
 ?>

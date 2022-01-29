@@ -1,6 +1,9 @@
+<?php 
+session_start();
+?>
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
   	<title>XEROX</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,116 +12,128 @@
 		
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/style.css">
-  </head>
-    <section class="py-5">
-            <div class="container px-4 px-lg-5 mt-5">
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">PF I</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+</head>
+<body>
+<containner><br>
+<impressoras > 
+    <?php foreach($lista_filiais as $filial): ?>  
+        <section class="display_impressoras">
+            <div></div>
 
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Guaramirim</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="row_impressoras">    
+                </div>
+                
+                <div class="card_impressoras uso_impressoras">
+                    <div> 
+                        <form class="box_impressoras" action="Config/config_cadastrar_filial.php" method="POST">
+                            
+                        <a id="icon_config" class="fa fa-cog"  data-toggle="collapse" data-target="#navbar<?php echo $filial['ID'];?>"></a>
+                            <div class="">
+                                <box class="">
+                                    <div class="collapse" id="navbar<?php echo $filial['ID']; ?>">
 
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Itajai</h5>
-                                </div>
+                                    <ul class="">
+                                    <li>
+                                        <div>
+                                            <div>
+                                                <h1>Teste
+                                            </div>
+                                        </div>
+                                    </li>
+                                    </ul>
+                                </box>
+                                </nav>
                             </div>
-                        </div>
+                        </form>
                     </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Banweg</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">linhares</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Paumar</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">TGM</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Manaus</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">São Bernardo</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Gravataí</h5>
-                                </div>
-                            </div>
-                        </div>
+                    <div>
+                    <br><hr><h2><?php echo $filial['nome']; ?></h2><hr>
+                    <p><?php echo $filial['responsavel']; ?></p>
+                    <p><?php echo $filial['ramal']; ?></p>
+                    <p><?php echo $filial['ID']; ?></p>
+                    <p><?php echo $filial['celular']; ?></p><hr>
+                    <br><br><br>
                     </div>
                 </div>
             </div>
         </section>
+    <?php endforeach; ?>	
+</impressoras>
+
+
+
+</containner>
+    </div>
+    <div><br>
+    <?php
+            if(isset($_SESSION['nome_vazio'])):
+            ?>
+        <div class="alert alert-danger" role="alert">
+            Necessário preencher o campo "NOME".
+        </div>
+        <?php
+            endif;
+            // Destroi uma session especifica, nesse caso destrui a 'usuario invalido'
+            unset($_SESSION['nome_vazio']);
+        ?>
+    </div>
+    <div>
+    <?php
+            if(isset($_SESSION['filial_vazio'])):
+            ?>
+        <div class="alert alert-danger" role="alert">
+            Necessário preencher o campo "FILIAL".
+        </div>
+        <?php
+            endif;
+            // Destroi uma session especifica, nesse caso destrui a 'usuario invalido'
+            unset($_SESSION['filial_vazio']);
+        ?>
+    </div>
+
+    <div>
+    <?php
+            if(isset($_SESSION['secao_vazio'])):
+            ?>
+        <div class="alert alert-danger" role="alert">
+            Necessário preencher o campo "SEÇÃO".
+        </div>
+        <?php
+            endif;
+            // Destroi uma session especifica, nesse caso destrui a 'usuario invalido'
+            unset($_SESSION['secao_vazio']);
+        ?>
+    </div>
+
+    <div>
+    <?php
+            if(isset($_SESSION['ip_vazio'])):
+            ?>
+        <div class="alert alert-danger" role="alert">
+            Necessário preencher o campo "IP".
+        </div>
+        <?php
+            endif;
+            // Destroi uma session especifica, nesse caso destrui a 'usuario invalido'
+            unset($_SESSION['ip_vazio']);
+        ?>
+    </div>
+    <div>
+    <?php
+            if(isset($_SESSION['impressora_cadastrada'])):
+            ?>
+        <div class="alert alert-success" role="alert">
+            Impressora cadastrada com sucesso.
+        </div>
+        <?php
+            endif;
+            // Destroi uma session especifica, nesse caso destrui a 'usuario invalido'
+            unset($_SESSION['impressora_cadastrada']);
+        ?>
+    </div>
+</containner>
+</body>
+
 </html>
+
+
