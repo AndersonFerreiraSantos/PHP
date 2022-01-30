@@ -42,7 +42,7 @@ include('../../../banco.php');
                     <div>
                     <div class="input-group-prepend">
                         <span class="input-group-text2" id="inputGroup-sizing-sm">IP:</span>
-                        <input name="ip" type="text" class="form-controlip" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                        <input name="ip"value="" type="text" class="form-controlip" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                     </div><br>
                     <div class="input-group-prepend">
                         <span class="input-group-text2" id="inputGroup-sizing-sm">Seção:</span>

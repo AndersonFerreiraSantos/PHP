@@ -3878,6 +3878,7 @@ input[type="button"].btn-block {
         margin-left: 15px; } }
 
 .card-group {
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3891,7 +3892,7 @@ input[type="button"].btn-block {
     .card-group {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
+      -ms-flex-flow: row;
       flex-flow: row wrap; }
       .card-group > .card {
         -webkit-box-flex: 1;
@@ -8385,18 +8386,8 @@ a[data-toggle="collapse"] {
   min-width: 290px;
   height: 300px;
 }
-.card_impressoras2 {
-  color:white;
-  border-radius: 5px;
-  box-shadow: 17px 17px 13px 0px rgba(50, 50, 50, 0.22);
-  max-width: 290px;
-  min-width: 290px;
-  height: 300px;
-}
 
-.card_impressoras2:hover{
-  background-color:#2f89fc;
-} 
+
  
 .card_impressoras p {
   text-align: center;
@@ -8446,10 +8437,11 @@ a[data-toggle="collapse"] {
   max-height: 124px;
 }
 .form{
+  border-radius: 10px;
+  align-items: center;
   margin-top: -74px;
   background-color: #212121;
   padding: 5px;
-  align-items: center;
 }
 .box_form{
   background-color: white;
@@ -8528,3 +8520,42 @@ a[data-toggle="collapse"] {
   float:right;
   position: absolute;
 }
+
+.cadastrar1{
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+.cadastrar1:hover{
+  background-color: #2f89fc;
+}
+.cadastrar2:hover{
+  background-color: #2f89fc;
+  color: white;
+}
+.cadastrar2{
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border-radius: 10px;
+}
+.card_impressoras2 {
+  align-items: center;
+  text-align: center;
+  color:white;
+  border-radius: 5px;
+  box-shadow: 17px 17px 13px 0px rgba(50, 50, 50, 0.22);
+  max-width: 290px;
+  min-width: 290px;
+  height: 300px;
+}
+.card_impressoras2:hover {
+  background-color:#2f89fc;
+}
+.color:hover{
+  color: white;
+}
+

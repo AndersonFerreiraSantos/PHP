@@ -16,7 +16,6 @@ include('../../banco.php');
 		<link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-		
 		<div class="wrapper d-flex align-items-stretch">
 			<nav id="sidebar">
 				<div class="custom-menu">

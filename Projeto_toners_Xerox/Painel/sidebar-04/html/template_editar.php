@@ -3,7 +3,6 @@
 session_start();
 include('../../../banco.php');
 $ID = $_GET['ID'];
-echo $ID;
 
 $sql_cliente = "SELECT * FROM impressoras WHERE ID=$ID";
 $query_cliente = $mysqli->query($sql_cliente) or die($mysqli->error);

@@ -35,6 +35,6 @@ if($nome != '' && $responsavel != '' && $ramal != '' && $celular != ''){
     header('Location:http://localhost/Projetos/Projeto_toners_Xerox/Painel/sidebar-04/painel.php?painel=filiais');
 }else{
     $_SESSION['erro'] = true;
-    header('Location:http://localhost/Projetos/Projeto_toners_Xerox/Painel/sidebar-04/painel.php?painel=impressoras');
+    header('Location:http://localhost/Projetos/Projeto_toners_Xerox/Painel/sidebar-04/painel.php?painel=filiais');
 }
 ?>

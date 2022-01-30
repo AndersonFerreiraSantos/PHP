@@ -133,11 +133,11 @@ session_start();
                 </div>
             </div>
         </section>
-    <?php endforeach; ?>	
+    <?php endforeach; ?>
+    	
     <section class="display_impressoras">
         <a href="Config/config_session.php?acao=cadastrar">
-
-        <div class="row_impressoras">
+            <div class="row_impressoras">
                 <div class="card_impressoras2 uso_impressoras">
 
  
